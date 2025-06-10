@@ -1,0 +1,7 @@
+<?php
+$lang = [
+    'title' => 'Gestion des événements',
+    'event_name' => 'Nom de l\'événement',
+    'event_date' => 'Date',
+    'event_location' => 'Lieu'
+];
