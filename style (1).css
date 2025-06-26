@@ -1,0 +1,311 @@
+/* === FONTS & RESET === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+    --nude-rose: #f6e7d7;
+    --nude-beige: #f1ede9;
+    --nude-brown: #a68a75;
+    --text-dark: #3d3d3d;
+    --accent: #d9bfa9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.image {
+  border-radius: 100%;
+  display: flex ;
+  justify-content: left;
+  width: 90px;
+  height: 90px;
+  border: solid;
+ padding: auto;
+
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--nude-beige);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* === ANIMATION ENTRÉE === */
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* === HEADER === */
+header {
+    background: linear-gradient(120deg, var(--accent), var(--nude-rose));
+    color: var(--text-dark);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+header .logo {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 80px;
+}
+
+header h1 {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* === NAVIGATION === */
+nav {
+    background-color: var(--nude-brown);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    padding: 15px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    background-color: #7a6656;
+    border-radius: 6px;
+}
+
+/* === SECTIONS GÉNÉRALES === */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeIn 1s ease-in;
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: var(--nude-brown);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* === À PROPOS === */
+.a-propos {
+    background: var(--nude-rose);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    color: var(--text-dark);
+}
+
+/* === SERVICES === */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--nude-beige);
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    color: var(--nude-brown);
+    margin-bottom: 10px;
+}
+
+/* === BIENS IMMOBILIERS === */
+.liste-biens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.bien {
+    background-color: var(--nude-rose);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.bien:hover {
+    transform: scale(1.04);
+}
+
+.bien img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.bien-info {
+    padding: 20px;
+}
+
+.bien-info h4 {
+    color: var(--nude-brown);
+    font-size: 1.2em;
+}
+
+.bien-info p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* === FORMULAIRES === */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    max-width: 600px;
+    margin: auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+form button {
+    background-color: var(--nude-brown);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #8a705c;
+}
+
+/* === RÉSEAUX SOCIAUX === */
+.reseaux {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.reseaux-list img{
+    height: 55px;
+    width: 55px;
+
+}
+.reseaux a {
+    color: var(--nude-brown);
+    transition: color 0.3s ease;
+}
+
+.reseaux a:hover {
+    color: #6b5442;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #292724;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reseaux {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.page-link {
+    background-color: #ffffff;
+    color: #0052D4;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 500;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-link i {
+    font-size: 1.3em;
+}
+
+.page-link:hover {
+    transform: translateY(-6px);
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+    .boutons-pages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-link {
+        width: 90%;
+        justify-content: center;
+    }
+}
